@@ -4,7 +4,7 @@ class ChartColors {
   ChartColors._();
 
   static const Color kLineColor = Color(0xffF6D249);
-  static const Color lineFillColor = Color(0x554C86CD);
+  static const Color lineFillColor = Color(0xffE6E6E6);
   static const Color ma5Color = Color(0xffF48211);
   static const Color ma10Color = Color(0xff76B107);
   static const Color ma30Color = Color(0xffB79DFF);
@@ -12,7 +12,7 @@ class ChartColors {
   static const Color dnColor = Color(0xff9BDE1D);
   static const Color volColor = Color(0xffC6C6C6);
 
-  static const Color macdColor = Color(0xff4729AE);
+  static const Color macdColor = Color(0xffe6e6e6);
   static const Color difColor = Color(0xffC9B885);
   static const Color deaColor = Color(0xff6CB0A6);
 

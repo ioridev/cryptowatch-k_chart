@@ -16,7 +16,7 @@ abstract class BaseChartRenderer<T> {
     ..isAntiAlias = true
     ..filterQuality = FilterQuality.high
     ..strokeWidth = 0.5
-    ..color = Color(0xff4c5c74);
+    ..color = Color(0xffc3c3c3);
 
   BaseChartRenderer(
       {@required this.chartRect,
