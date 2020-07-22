@@ -15,7 +15,7 @@ class MainRenderer extends BaseChartRenderer<CandleEntity> {
 
   MainRenderer(Rect mainRect, double maxValue, double minValue,
       double topPadding, this.state, this.isLine, int fixedLength,
-      [this.maDayList = const [5, 10, 20]])
+      [this.maDayList = const [5, 30, 60]])
       : super(
             chartRect: mainRect,
             maxValue: maxValue,

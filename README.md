@@ -35,7 +35,7 @@ Container(
                 timeFormat: TimeFormat.YEAR_MONTH_DAY,
                 onLoadMore: (bool a) {},// Called when the data scrolls to the end. When a is true, it means the user is pulled to the end of the right side of the data. When a
                 // is false, it means the user is pulled to the end of the left side of the data.
-                maDayList: [5,10,20],// Display of MA,This parameter must be equal to DataUtil.calculate‘s maDayList
+                maDayList: [5,30,60],// Display of MA,This parameter must be equal to DataUtil.calculate‘s maDayList
                 bgColor: [Colors.black, Colors.black],// The background color of the chart is gradient
                 isChinese: true,// Graphic language
                 isOnDrag: (isDrag){},// true is on Drag.Don't load data while Draging.
