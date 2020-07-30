@@ -4,7 +4,7 @@ class NumberUtil {
   static String format(double n) {
     if (n >= 10000) {
       n /= 1000;
-      return "${n.toStringAsFixed(2)}K";
+      return "${n.toStringAsFixed(0)}K";
     } else {
       return n.toStringAsFixed(0);
     }
