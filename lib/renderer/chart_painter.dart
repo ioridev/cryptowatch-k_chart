@@ -17,7 +17,7 @@ class ChartPainter extends BaseChartPainter {
   BaseChartRenderer mMainRenderer, mVolRenderer, mSecondaryRenderer;
   StreamSink<InfoWindowEntity> sink;
   Color upColor, dnColor;
-  Color ma5Color, ma10Color, ma30Color;
+  Color ma5Color, ma25Color, ma75Color;
   Color volColor;
   Color macdColor, difColor, deaColor, jColor;
   List<Color> bgColor;

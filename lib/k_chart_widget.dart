@@ -53,7 +53,7 @@ class KChartWidget extends StatefulWidget {
     this.onLoadMore,
     this.bgColor,
     this.fixedLength,
-    this.maDayList = const [5, 30, 60],
+    this.maDayList = const [5, 25, 75],
     this.flingTime = 600,
     this.flingRatio = 0.5,
     this.flingCurve = Curves.decelerate,
