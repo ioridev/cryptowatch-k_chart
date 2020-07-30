@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
     if (bids == null || asks == null || bids.isEmpty || asks.isEmpty) return;
     _bids = List();
     _asks = List();
-    double amount = 0.0;
+    double amount = 0;
     bids?.sort((left, right) => left.price.compareTo(right.price));
     //累加买入委托量
     bids.reversed.forEach((item) {
@@ -71,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _bids.insert(0, item);
     });
 
-    amount = 0.0;
+    amount = 0;
     asks?.sort((left, right) => left.price.compareTo(right.price));
     //累加卖出委托量
     asks?.forEach((item) {

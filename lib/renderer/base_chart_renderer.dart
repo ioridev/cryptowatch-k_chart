@@ -36,9 +36,9 @@ abstract class BaseChartRenderer<T> {
 
   String format(double n) {
     if (n == null || n.isNaN) {
-      return "0.00";
+      return "0";
     } else {
-      return n.toStringAsFixed(fixedLength);
+      return n.toStringAsFixed(0);
     }
   }
 

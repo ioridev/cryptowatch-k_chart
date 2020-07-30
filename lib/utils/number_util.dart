@@ -6,7 +6,7 @@ class NumberUtil {
       n /= 1000;
       return "${n.toStringAsFixed(2)}K";
     } else {
-      return n.toStringAsFixed(4);
+      return n.toStringAsFixed(0);
     }
   }
 
@@ -30,7 +30,7 @@ class NumberUtil {
   static bool checkNotNullOrZero(double a) {
     if (a == null || a == 0) {
       return false;
-    } else if (a.abs().toStringAsFixed(4) == "0.0000") {
+    } else if (a.abs().toStringAsFixed(0) == "0") {
       return false;
     } else {
       return true;

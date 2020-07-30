@@ -261,11 +261,11 @@ class _KChartWidgetState extends State<KChartWidget>
           double upDownPercent = entity.ratio ?? (upDown / entity.open) * 100;
           infos = [
             getDate(entity.time),
-            entity.open.toStringAsFixed(widget.fixedLength),
-            entity.high.toStringAsFixed(widget.fixedLength),
-            entity.low.toStringAsFixed(widget.fixedLength),
-            entity.close.toStringAsFixed(widget.fixedLength),
-            "${upDown > 0 ? "+" : ""}${upDown.toStringAsFixed(widget.fixedLength)}",
+            entity.open.toStringAsFixed(0),
+            entity.high.toStringAsFixed(0),
+            entity.low.toStringAsFixed(0),
+            entity.close.toStringAsFixed(0),
+            "${upDown > 0 ? "+" : ""}${upDown.toStringAsFixed(0)}",
             "${upDownPercent > 0 ? "+" : ''}${upDownPercent.toStringAsFixed(2)}%",
           ];
           return Container(
