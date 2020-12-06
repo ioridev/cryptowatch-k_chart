@@ -50,7 +50,7 @@ class KChartWidget extends StatefulWidget {
     this.secondaryState = SecondaryState.MACD,
     this.volHidden = false,
     this.isLine,
-    this.isChinese = true,
+    this.isChinese = false,
     this.timeFormat = TimeFormat.YEAR_MONTH_DAY,
     this.onLoadMore,
     this.bgColor,
