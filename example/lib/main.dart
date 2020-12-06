@@ -116,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
         color: Colors.blue);
   }
 
-  Future<List<KLineEntity>> fetchOhlcs() async {
+  Future<void> fetchOhlcs() async {
     final response = await http.get(
         'https://api.cryptowat.ch/markets/bitflyer/btcjpy/ohlc?periods=60');
     if (response.statusCode == 200) {
