@@ -236,9 +236,6 @@ class _KChartWidgetState extends State<KChartWidget>
     "高",
     "低",
     "收",
-    "涨跌额",
-    "涨跌幅",
-    "成交额"
   ];
   final List<String> infoNamesEN = [
     "Date",
@@ -246,9 +243,6 @@ class _KChartWidgetState extends State<KChartWidget>
     "High",
     "Low",
     "Close",
-    "Change",
-    "Change%",
-    "Amount"
   ];
   List<String> infos;
 
@@ -261,17 +255,13 @@ class _KChartWidgetState extends State<KChartWidget>
               !snapshot.hasData ||
               snapshot.data.kLineEntity == null) return Container();
           KLineEntity entity = snapshot.data.kLineEntity;
-          double upDown = entity.change ?? entity.close - entity.open;
-          double upDownPercent = entity.ratio ?? (upDown / entity.open) * 100;
+
           infos = [
             getDate(entity.time),
             entity.open.toStringAsFixed(widget.fixedLength),
             entity.high.toStringAsFixed(widget.fixedLength),
             entity.low.toStringAsFixed(widget.fixedLength),
             entity.close.toStringAsFixed(widget.fixedLength),
-            "${upDown > 0 ? "+" : ""}${upDown.toStringAsFixed(widget.fixedLength)}",
-            "${upDownPercent > 0 ? "+" : ''}${upDownPercent.toStringAsFixed(2)}%",
-            entity.amount.toInt().toString()
           ];
           return Container(
             margin: EdgeInsets.only(
