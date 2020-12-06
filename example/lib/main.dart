@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:k_chart/flutter_k_chart.dart';
-import 'package:k_chart/k_chart_widget.dart';
+import 'package:cryptowatch_candle_chart/flutter_k_chart.dart';
+import 'package:cryptowatch_candle_chart/k_chart_widget.dart';
 import 'package:http/http.dart' as http;
 
 void main() => runApp(MyApp());
