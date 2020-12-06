@@ -16,7 +16,7 @@ abstract class BaseChartRenderer<T> {
     ..isAntiAlias = true
     ..filterQuality = FilterQuality.high
     ..strokeWidth = 0.5
-    ..color = Color(0xff4c5c74);
+    ..color = Color(0xffc3c3c3);
 
   BaseChartRenderer(
       {@required this.chartRect,
@@ -36,9 +36,9 @@ abstract class BaseChartRenderer<T> {
 
   String format(double n) {
     if (n == null || n.isNaN) {
-      return "0.00";
+      return "0";
     } else {
-      return n.toStringAsFixed(fixedLength);
+      return n.toStringAsFixed(0);
     }
   }
 
@@ -65,6 +65,10 @@ abstract class BaseChartRenderer<T> {
   }
 
   TextStyle getTextStyle(Color color) {
-    return TextStyle(fontSize: 10.0, color: color);
+    return TextStyle(
+      fontSize: 11.0,
+      fontWeight: FontWeight.bold,
+      color: color,
+    );
   }
 }

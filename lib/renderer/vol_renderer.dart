@@ -39,7 +39,7 @@ class VolRenderer extends BaseChartRenderer<VolumeEntity> {
 
     if (lastPoint.MA10Volume != 0) {
       drawLine(lastPoint.MA10Volume, curPoint.MA10Volume, canvas, lastX, curX,
-          ChartColors.ma10Color);
+          ChartColors.ma25Color);
     }
   }
 
@@ -60,7 +60,7 @@ class VolRenderer extends BaseChartRenderer<VolumeEntity> {
         if (NumberUtil.checkNotNullOrZero(data.MA10Volume))
           TextSpan(
               text: "MA10:${NumberUtil.format(data.MA10Volume)}    ",
-              style: getTextStyle(ChartColors.ma10Color)),
+              style: getTextStyle(ChartColors.ma25Color)),
       ],
     );
     TextPainter tp = TextPainter(text: span, textDirection: TextDirection.ltr);

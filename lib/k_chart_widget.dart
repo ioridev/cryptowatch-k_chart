@@ -55,7 +55,7 @@ class KChartWidget extends StatefulWidget {
     this.onLoadMore,
     this.bgColor,
     this.fixedLength,
-    this.maDayList = const [5, 10, 20],
+    this.maDayList = const [5, 25, 75],
     this.flingTime = 600,
     this.flingRatio = 0.5,
     this.flingCurve = Curves.decelerate,
@@ -265,8 +265,8 @@ class _KChartWidgetState extends State<KChartWidget>
           ];
           return Container(
             margin: EdgeInsets.only(
-                left: snapshot.data.isLeft ? 4 : mWidth - mWidth / 3 - 4,
-                top: 25),
+                left: snapshot.data.isLeft ? 4 : mWidth - mWidth / 2 - 2.5,
+                top: 15),
             width: mWidth / 3,
             decoration: BoxDecoration(
                 color: ChartColors.selectFillColor,
@@ -275,7 +275,7 @@ class _KChartWidgetState extends State<KChartWidget>
             child: ListView.builder(
               padding: EdgeInsets.all(4),
               itemCount: infoNamesCN.length,
-              itemExtent: 14.0,
+              itemExtent: 18.0,
               shrinkWrap: true,
               itemBuilder: (context, index) {
                 return _buildItem(infos[index],
@@ -287,21 +287,27 @@ class _KChartWidgetState extends State<KChartWidget>
   }
 
   Widget _buildItem(String info, String infoName) {
-    Color color = Colors.white;
+    Color color = Colors.black;
     if (info.startsWith("+"))
-      color = Colors.green;
+      color = Color(0xffFC932A);
     else if (info.startsWith("-"))
-      color = Colors.red;
+      color = Color(0xff7AB708);
     else
-      color = Colors.white;
+      color = Colors.black;
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         Expanded(
-            child: Text("$infoName",
-                style: const TextStyle(color: Colors.white, fontSize: 10.0))),
-        Text(info, style: TextStyle(color: color, fontSize: 10.0)),
+          child: Text(
+            "$infoName",
+            style: const TextStyle(color: Colors.black, fontSize: 12.0),
+          ),
+        ),
+        Text(
+          info,
+          style: TextStyle(color: color, fontSize: 13.0),
+        ),
       ],
     );
   }

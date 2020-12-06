@@ -15,7 +15,7 @@ class MainRenderer extends BaseChartRenderer<CandleEntity> {
 
   MainRenderer(Rect mainRect, double maxValue, double minValue,
       double topPadding, this.state, this.isLine, int fixedLength,
-      [this.maDayList = const [5, 10, 20]])
+      [this.maDayList = const [5, 25, 75]])
       : super(
             chartRect: mainRect,
             maxValue: maxValue,
@@ -52,11 +52,11 @@ class MainRenderer extends BaseChartRenderer<CandleEntity> {
           if (data.mb != 0)
             TextSpan(
                 text: "UB:${format(data.up)}    ",
-                style: getTextStyle(ChartColors.ma10Color)),
+                style: getTextStyle(ChartColors.ma25Color)),
           if (data.dn != 0)
             TextSpan(
                 text: "LB:${format(data.dn)}    ",
-                style: getTextStyle(ChartColors.ma30Color)),
+                style: getTextStyle(ChartColors.ma75Color)),
         ],
       );
     }
@@ -71,8 +71,9 @@ class MainRenderer extends BaseChartRenderer<CandleEntity> {
     for (int i = 0; i < data.maValueList.length; i++) {
       if (data.maValueList[i] != 0) {
         var item = TextSpan(
-            text: "MA${maDayList[i]}:${format(data.maValueList[i])}    ",
+            text: "MA(${maDayList[i]}):${format(data.maValueList[i])}    ",
             style: getTextStyle(ChartColors.getMAColor(i)));
+
         result.add(item);
       }
     }
@@ -166,7 +167,7 @@ class MainRenderer extends BaseChartRenderer<CandleEntity> {
       Canvas canvas, double lastX, double curX) {
     if (lastPoint.up != 0) {
       drawLine(lastPoint.up, curPoint.up, canvas, lastX, curX,
-          ChartColors.ma10Color);
+          ChartColors.ma25Color);
     }
     if (lastPoint.mb != 0) {
       drawLine(
@@ -174,7 +175,7 @@ class MainRenderer extends BaseChartRenderer<CandleEntity> {
     }
     if (lastPoint.dn != 0) {
       drawLine(lastPoint.dn, curPoint.dn, canvas, lastX, curX,
-          ChartColors.ma30Color);
+          ChartColors.ma75Color);
     }
   }
 
