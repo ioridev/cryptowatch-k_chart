@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:k_chart/utils/number_util.dart';
+import 'package:cryptowatch_candle_chart/utils/number_util.dart';
 
 import '../entity/k_line_entity.dart';
 
